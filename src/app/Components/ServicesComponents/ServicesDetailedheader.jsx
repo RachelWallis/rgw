@@ -3,7 +3,6 @@
 import React from 'react';
 import Heading from '../Headers/Heading';
 import Image from 'next/image';
-import services1 from '../../assets/images/services-1.jpg'
 
 function ServicesDetailedheader() {
     return (
@@ -24,7 +23,6 @@ function ServicesDetailedheader() {
                     />
                 <div className="page-header-bottom">
                     <div className="single-image">
-                        <Image src={services1} alt="about-header" />
                     </div>
                 </div>
             </div>

@@ -1,8 +1,5 @@
 "use client"
 import React from 'react';
-import Art from '../Misc/Art';
-import Image from 'next/image';
-import contactImage from '../../assets/images/contact_img.jpg'
 
 function ContactHeader() {
     return (
@@ -21,7 +18,6 @@ function ContactHeader() {
                 </div>
                 <div className="page-header-bottom">
                     <div className="single-image">
-                        <Image src={contactImage} alt="contact-header" />
                     </div>
                 </div>
             </div>

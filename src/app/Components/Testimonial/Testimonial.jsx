@@ -6,8 +6,6 @@ import { Navigation, Scrollbar, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 import Testimonialtemplate from './Testimonialtemplate';
 import testimonials from '../../Data/testimonials';
-import Art from '../Misc/Art';
-import artImage from '../../assets/images/art_2.png';
 
 function Testimonial(props) {
     const [totalSlides, setTotalSlides] = useState(0);
@@ -83,7 +81,6 @@ function Testimonial(props) {
                         </div>
                     </div>
                 </div>
-                {!props.noArt && <Art art={artImage} type={`${props.type || '2'}`} />}
             </div>
         </div>
     );
