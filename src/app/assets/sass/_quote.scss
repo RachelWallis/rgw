@@ -1,0 +1,311 @@
+.quote-outer {
+    padding: 4rem;
+
+    .quote-controls {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $rgw-color-lightblue;
+        padding: 1rem;
+
+
+        button {
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            border: 1px solid #9dacbd;
+            display: flex;
+            flex-direction: row;
+            gap: 1.2rem;
+            align-items: center;
+
+            &:before {
+                background-color: white;
+            }
+
+            &:after {
+                background-color: white;           
+            }
+        }
+
+        .left, .right {
+            display: flex;
+            flex-direction: row;
+            gap: 1.2rem;
+        }
+        
+        .left button {
+            margin-right: 0;
+        }
+
+        .right button {
+            margin-left: 0;
+        }
+
+    }
+    
+    .quote {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 4rem;
+        gap: 1rem;
+        background-color: $rgw-color-lightblue;
+
+        .quote-contact-form {
+            background-color: white;
+            min-width: 50%;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            min-width: 600px;
+            max-width: 80%;
+
+            .quote-contact-fields {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                margin-bottom: 4rem;
+    
+                label {
+                    font-size: 1.6rem;
+                    display: flex;
+                    flex-direction: column;
+
+                    input {
+                        border: 2px solid black;
+                        height: 4.4rem;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+
+        }
+
+
+        .question-text {
+            margin-top: 2rem;
+            font-size: 5.8rem;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .sub-text {
+            padding: 1.5rem;
+        }
+
+        .info-box {
+            background-color: $rgw-success-secondary;
+            padding: 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            color: $rgw-success-primary;
+            font-size: 1.4rem;
+            margin-top: 3rem;
+            align-items: center;
+            border-radius: 5px;
+            width: 80%;
+            border-left: 10px solid $rgw-success-primary;
+
+            i {
+                font-size: 2rem;
+            }
+
+            &.error {
+                background-color: $rgw-error-secondary;
+                color: $rgw-error-primary;
+                display: flex;
+                flex-direction: column;
+                border-color: $rgw-error-primary;
+                align-items: flex-start;
+                
+                .text {
+                    background: rgb(255 255 255 / 50%);
+                    padding: 20px;
+                    width: 100%;
+                    border-radius: 5px;
+
+                    .error-fix {
+                        font-weight: 700;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+                
+
+                .header {
+                    flex-direction: row;
+                    display: flex;
+                    gap: 0.5rem;
+                    gap: 1rem;
+                    align-items: center;
+                    font-size: 1.6rem;
+
+                    i {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+
+        .quote-question {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .input-container {
+                display: flex;
+                align-items: center;
+                gap: 0;
+
+                input {
+                    min-width: 5rem;
+                    border: 2px solid black;
+                    height: $input-height;
+                    border-radius: 1rem 0 0 1rem;
+                    text-transform: uppercase;
+                    padding-left: 1rem;
+                }
+    
+                button {
+                    height: $input-height;
+                    padding: 0 2rem;
+                    background-color: $rgw-color-primary;
+                    color: black;
+                    border-radius: 0 1rem 1rem 0;
+                    font-weight: 500;
+                    border: 2px solid black;
+                    border-left: 0;
+                    gap: 1rem;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+
+
+            .quote-label-text {
+                padding: 0;
+                align-items: center;
+                display: flex;
+                gap: 1rem;
+                color: black;
+
+                .button {
+                    border: 4px solid darken($quote-button,10%);
+                    background-color: $quote-button;
+                    padding: 4rem 6rem;
+                    border-radius: 20px;
+                    font-size: 2.6rem;
+
+                    &.button-uncertain, &.quote-skip-button {
+                        border: none;
+                        padding: 2rem 3rem;
+                        font-size: 2.2rem;
+                        border-radius: 1rem;
+
+                        &::before {
+                            background-color: #c4ccdd;
+                        }
+                    }
+
+                    &::before {
+                        background-color: $quote-button;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    border-radius: 20px;
+                    background-color: darken($quote-button, 10%);
+                }
+
+                input[type="radio"] {
+                    opacity: 0;
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
+
+    }
+
+    .quote-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .quote-modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .quote-modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            z-index: 2;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.25);
+
+            .quote-modal-inner {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                .header {
+                    font-weight: bold;
+                    font-size: 3rem;
+                }
+
+                button {
+                    font-size: 1.6rem;
+                    padding: 1rem 2rem;
+                    border: none;
+                    cursor: pointer;
+                    background-color: $quote-button;
+                    color: black;
+
+                    &:hover {
+                        background-color: darken($quote-button, 10%);
+                    }
+                }
+            }
+            .quote-modal-close {
+                display: block;
+                font-size: 3rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                text-align: right;
+                position: relative;
+                top: -1.2rem;   
+            }
+        }
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+}

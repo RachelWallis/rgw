@@ -1,0 +1,16 @@
+
+
+[
+  {
+    "id": "ideal-logic-30kw",
+    "brand": "Ideal",
+    "model": "Logic+ 30kW",
+    "type": "Combi",
+    "suitableFor": {
+      "bedrooms": "2-4",
+      "bathrooms": "1-2"
+    },
+    "price": 900,
+    "efficiency": "94%"
+  }
+]
