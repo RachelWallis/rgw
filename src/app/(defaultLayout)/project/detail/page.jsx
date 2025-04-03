@@ -7,7 +7,7 @@ function ProjectDetailed() {
     return (
         <>
             <DetailedHeader
-                heading="Sleep therapy's product landing page design with ecommerce integration."
+                heading="Sleep therapys product landing page design with ecommerce integration."
                 client="Comfort"
                 service="UI/UX Design"
                 date="25 Nov. 2020"
