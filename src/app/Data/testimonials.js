@@ -6,7 +6,7 @@ const testimonials = [
         name: 'Mark Brown',
         designation: 'Director, Envato',
         testimony:
-            'Their work is quite fast and results are impeccable although they are a smaller agency but has it's resources in one place with a talented young team.',
+            'Their work is quite fast and results are impeccable although they are a smaller agency but has it has resources in one place with a talented young team.',
         image: {
             src: peopleImage,
             alt: 'testimonial image',
@@ -17,7 +17,7 @@ const testimonials = [
         name: 'Mark Stewart',
         designation: 'Operations Manager, Envato',
         testimony:
-            'Their work is quite fast and results are impeccable although they are a smaller agency but has it's resources in one place with a talented young team.',
+            'Their work is quite fast and results are impeccable although they are a smaller agency but has it has resources in one place with a talented young team.',
         image: {
             src: peopleImage,
             alt: 'testimonial image',
@@ -28,7 +28,7 @@ const testimonials = [
         name: 'Michaellw Dawn',
         designation: 'Art Director, Envato',
         testimony:
-            'Their work is quite fast and results are impeccable although they are a smaller agency but has it's resources in one place with a talented young team.',
+            'Their work is quite fast and results are impeccable although they are a smaller agency but has it has resources in one place with a talented young team.',
         image: {
             src: peopleImage,
             alt: 'testimonial image',

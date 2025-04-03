@@ -12,7 +12,7 @@ export const RelatedBlogs = [
         image: blogThumbnailImage1,
         date: '23 Sep. 2020',
         category: 'Company',
-        title: 'New developments on the way and the team couldn't be more excited.',
+        title: 'New developments on the way and the team could not be more excited.',
         description:
             'Doesn't for also fowl spirit also signs all dry bring there shall to beast fish reater upon can't…',
     },

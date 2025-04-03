@@ -6,7 +6,7 @@ import projectThumbnailImage5 from '../assets/images/project_thumbnail_img_05.jp
 const projects = [
     {
         title: 'UI/UX Design',
-        heading: 'Sleep therapy's product landing page design with ecommerce integration.',
+        heading: 'Sleep therapy product landing page design with ecommerce integration.',
         headingmini: 'Landing page',
         headingmini2: 'Comfort',
         image: {
