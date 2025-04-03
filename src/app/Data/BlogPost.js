@@ -33,7 +33,7 @@ const BlogPost = {
                     </p>
                     <p style={{ height: 'auto' }}>&nbsp;</p>
                     <p>
-                        Were make night hath thing you&rsquo;ll you night beast moving seasons over you&rsquo;re face subdue Said
+                        Were make night hath thing you night beast moving seasons over you&rsquo;re face subdue Said
                         also to light first multiply that their wherein deep, green under darkness you&rsquo;ll made don&rsquo;t hat{' '}
                         <strong>
                             <a href="/#">darkness without man living spirit</a>{' '}
@@ -77,7 +77,7 @@ const BlogPost = {
                 </div>
                 <div className="paragraph dark-1">
                     <p>
-                        Were make night hath thing you&rsquo;ll you night beast moving seasons over you&rsquo;re face subdue Said
+                        Were make night hath thing you night beast moving seasons over you&rsquo;re face subdue Said
                         also to light first multiply that their wherein deep, green under darkness you&rsquo;ll made don&rsquo;t hat{' '}
                         <strong>
                             <a href="/#">darkness without man living spirit</a>{' '}
@@ -121,7 +121,7 @@ const BlogPost = {
                                                     </a>
                                                     <h5 className="date">Dec 8, 2020</h5>
                                                 </div>
-                                                <p>Were make night hath thing you'll you night beast moving seasons over you're face is said also to light first multiply that their wherein deep, green under there darkness you.</p>
+                                                <p>Were make night hath thing you you night beast moving seasons over you're face is said also to light first multiply that their wherein deep, green under there darkness you.</p>
                                     
                                                 <div className="reply-button">
                                                     <a className="comment-reply-link" href="/#">Reply</a>
@@ -169,7 +169,7 @@ const BlogPost = {
                                                     <h5 className="date">Dec 8, 2020</h5>
                                                 </div>
 
-                                                <p>Were make night hath thing you'll you night beast moving seasons over you're face is said also to light first multiply that their wherein deep, green under there.</p>
+                                                <p>Were make night hath thing you you night beast moving seasons over you're face is said also to light first multiply that their wherein deep, green under there.</p>
                                     
                                 
                                                 <div className="reply-button">
