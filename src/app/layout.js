@@ -4,7 +4,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import "slick-carousel/slick/slick.css";
 import "./assets/sass/style.scss";
-import Preloader from './Components/Misc/Preloader';
 import LenisScrollClient from './Components/LenisScroll';
 
 const poppinsBlack = localFont({
