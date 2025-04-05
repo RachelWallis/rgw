@@ -1,119 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap');
 
-@import '_variables.scss';
-@import '_mixins.scss';
-@import '_defaults.scss';
-@import '_globals.scss';
+@use '_variables.scss';
+@use '_mixins.scss';
+@use '_defaults.scss';
+@use '_globals.scss';
 
 /********************
 preloader
 ********************/
-@import '_preloader.scss';
+@use '_preloader.scss';
 
 /********************
 typography
 ********************/
-@import '_typography.scss';
+@use '_typography.scss';
 
 /********************
 wordpress core
 ********************/
-@import '_wp-core.scss';
+@use '_wp-core.scss';
 
 /********************
 button
 ********************/
-@import '_buttons.scss';
+@use '_buttons.scss';
 
 /********************
 blog
 ********************/
-@import '_blog.scss';
+@use '_blog.scss';
 
 /********************
 project
 ********************/
-@import '_projects.scss';
+@use '_projects.scss';
 
 /********************
 testimonial
 ********************/
-@import '_testimonials.scss';
+@use '_testimonials.scss';
 
 /********************
 client
 ********************/
-@import '_clients.scss';
+@use '_clients.scss';
 
 /********************
 navigation
 ********************/
-@import '_navigation.scss';
+@use '_navigation.scss';
 
 /********************
 team member
 ********************/
-@import '_team.scss';
+@use '_team.scss';
 
 /********************
 comments
 ********************/
-@import '_comments.scss';
+@use '_comments.scss';
 
 /********************
 404
 ********************/
-@import '_error.scss';
+@use '_error.scss';
 
 /********************
 service
 ********************/
-@import '_services.scss';
+@use '_services.scss';
 
 /********************
 tabs
 ********************/
-@import '_tabs.scss';
+@use '_tabs.scss';
 
 /********************
 contact form
 ********************/
-@import '_contact-form.scss';
+@use '_contact-form.scss';
 
 /********************
 search
 ********************/
-@import '_search.scss';
+@use '_search.scss';
 
 /********************
 footer
 ********************/
-@import '_footer.scss';
+@use '_footer.scss';
 
 /********************
 video
 ********************/
-@import '_video.scss';
+@use '_video.scss';
 
 /********************
 artwork
 ********************/
-@import '_artwork.scss';
+@use '_artwork.scss';
 
 /********************
 sections
 ********************/
-@import '_sections.scss';
+@use '_sections.scss';
 
 /********************
 about
 ********************/
-@import '_about.scss';
+@use '_about.scss';
 
 /********************
 Quote
 ********************/
-@import '_quote.scss';
+@use '_quote.scss';
 
 
 .related-posts--heading {
@@ -123,4 +123,8 @@ Quote
 /* Disable smooth scroll behavior globally */
 html {
     scroll-behavior: auto !important;
+  }
+
+  body {
+    background: pink !important;
   }
