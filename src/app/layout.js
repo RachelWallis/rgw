@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import "slick-carousel/slick/slick.css";
 import LenisScrollClient from './Components/LenisScroll';
 
-import "./assets/sass/style.scss";
+import '@/app/assets/sass/style.scss';
 
 const poppinsBlack = localFont({
   src: './assets/fonts/Poppins-Black.ttf',
@@ -71,7 +71,6 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="author" content="Weaverwebs - Rachel Wallis" />
         <link rel="icon" href="favicon.ico" />
-        <style>{`body { background-color: red !important; }`}</style>
       </head>
       <body
         className={`${poppinsBlack.variable} ${poppinsBold.variable} ${poppinsExtraBold.variable} ${poppinsExtraLight.variable} ${poppinsLight.variable} ${poppinsMedium.variable} ${poppinsRegular.variable} ${poppinsSemiBold.variable} ${poppinsThin.variable}`}
