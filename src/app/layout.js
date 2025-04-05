@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import "slick-carousel/slick/slick.css";
 import LenisScrollClient from './Components/LenisScroll';
 
-import '@/app/assets/sass/style.scss';
+import '@/app/style.scss';
 
 const poppinsBlack = localFont({
   src: './assets/fonts/Poppins-Black.ttf',
