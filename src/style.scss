@@ -1,120 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap');
 
-@import './assets/sass/_variables.scss';
-@import './assets/sass/_mixins.scss';
-@import './assets/sass/_defaults.scss';
-@import './assets/sass/_globals.scss';
+@import '/src/app/assets/sass/_variables.scss';
+@import '/src/app/assets/sass/_mixins.scss';
+@import '/src/app/assets/sass/_defaults.scss';
+@import '/src/app/assets/sass/_globals.scss';
 
 /********************
 preloader
 ********************/
-@import './assets/sass/_preloader.scss';
+@import '/src/app/assets/sass/_preloader.scss';
 
 /********************
 typography
 ********************/
-@import './assets/sass/_typography.scss';
+@import '/src/app/assets/sass/_typography.scss';
 
 /********************
 wordpress core
 ********************/
-@import './assets/sass/_wp-core.scss';
+@import '/src/app/assets/sass/_wp-core.scss';
 
 /********************
 button
 ********************/
-@import './assets/sass/_buttons.scss';
+@import '/src/app/assets/sass/_buttons.scss';
 
 /********************
 blog
 ********************/
-@import './assets/sass/_blog.scss';
+@import '/src/app/assets/sass/_blog.scss';
 
 /********************
 project
 ********************/
-@import './assets/sass/_projects.scss';
+@import '/src/app/assets/sass/_projects.scss';
 
 /********************
 testimonial
 ********************/
-@import './assets/sass/_testimonials.scss';
+@import '/src/app/assets/sass/_testimonials.scss';
 
 /********************
 client
 ********************/
-@import './assets/sass/_clients.scss';
+@import '/src/app/assets/sass/_clients.scss';
 
 /********************
 navigation
 ********************/
-@import './assets/sass/_navigation.scss';
+@import '/src/app/assets/sass/_navigation.scss';
 
 /********************
 team member
 ********************/
-@import './assets/sass/_team.scss';
+@import '/src/app/assets/sass/_team.scss';
 
 /********************
 comments
 ********************/
-@import './assets/sass/_comments.scss';
+@import '/src/app/assets/sass/_comments.scss';
 
 /********************
 404
 ********************/
-@import './assets/sass/_error.scss';
+@import '/src/app/assets/sass/_error.scss';
 
 /********************
 service
 ********************/
-@import './assets/sass/_services.scss';
+@import '/src/app/assets/sass/_services.scss';
 
 /********************
 tabs
 ********************/
-@import './assets/sass/_tabs.scss';
+@import '/src/app/assets/sass/_tabs.scss';
 
 /********************
 contact form
 ********************/
-@import './assets/sass/_contact-form.scss';
+@import '/src/app/assets/sass/_contact-form.scss';
 
 /********************
 search
 ********************/
-@import './assets/sass/_search.scss';
+@import '/src/app/assets/sass/_search.scss';
 
 /********************
 footer
 ********************/
-@import './assets/sass/_footer.scss';
+@import '/src/app/assets/sass/_footer.scss';
 
 /********************
 video
 ********************/
-@import './assets/sass/_video.scss';
+@import '/src/app/assets/sass/_video.scss';
 
 /********************
 artwork
 ********************/
-@import './assets/sass/_artwork.scss';
+@import '/src/app/assets/sass/_artwork.scss';
 
 /********************
 sections
 ********************/
-@import './assets/sass/_sections.scss';
+@import '/src/app/assets/sass/_sections.scss';
 
 /********************
 about
 ********************/
-@import './assets/sass/_about.scss';
+@import '/src/app/assets/sass/_about.scss';
 
 /********************
 Quote
 ********************/
-@import './assets/sass/_quote.scss';
-
+@import '/src/app/assets/sass/_quote.scss';
 
 .related-posts--heading {
     margin-bottom: 3% !important;
