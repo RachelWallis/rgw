@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 
 export async function GET() {
-    const filePath = path.join(process.cwd(), "src/app/api/getBoilerPrices/boilerPrices.json");
+    const filePath = path.join(process.cwd(), "src/app/api/getBoilerPrices/boilers.json");
 
     try {
         const fileContents = fs.readFileSync(filePath, "utf-8");

@@ -14,7 +14,7 @@ export const RelatedBlogs = [
         category: 'Company',
         title: 'New developments on the way and the team could not be more excited.',
         description:
-            'Doesnt for also fowl spirit also signs all dry bring there shall to beast fish reater upon,
+            'Doesnt for also fowl spirit also signs all dry bring there shall to beast fish reater upon',
     },
 
     {

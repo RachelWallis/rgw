@@ -1,16 +1,13 @@
 import React from 'react';
-import AboutText from '../../../Components/AboutComponents/AboutText';
 import TextContentHeader from '../../../Components/TextContent/TextContentHeader';
 import ServicesDetailedheader from '../../../Components/ServicesComponents/ServicesDetailedheader';
 import CallToAction from '../../../Components/Misc/CallToAction';
+import TabsSection from '@/app/Components/Sections/TabsSection';
 
 function ServicesDetailed() {
     return (
         <>
             <ServicesDetailedheader />
-            <AboutText image={logo} content="To deliver our expertise flexibly and with maximum impact, we have developed
-                                    three different ways of working. Each is adaptable to your core needs, processes
-                                    and culture of your business." />
 
             <div className="text-content">
                 <div className="text-content-wrapper position-relative bg-black">
