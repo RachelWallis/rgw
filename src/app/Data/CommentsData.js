@@ -10,7 +10,7 @@ const comments = [
         name: 'Mark Stewart',
         date: 'Dec 08, 2020',
         commentBody:
-            'Were make night hath thing you you night beast moving seasons over you're face is said also to light first multiply that their where in deep, green under there darkness you.',
+            'Were make night hath thing you you night beast moving seasons over you are face is said also to light first multiply that their where in deep, green under there darkness you.',
         reply: [
             {
                 isReply: true,
@@ -31,7 +31,7 @@ const comments = [
                         },
                         name: 'Mark Stewar',
                         date: 'Dec 08, 2020',
-                        commentBody: 'Were make night hath thing you you night beast moving seasons over you're face is said also to light first multiply that their where in deep, green under there darkness you.',
+                        commentBody: 'Were make night hath thing you you night beast moving seasons over you are face is said also to light first multiply that their where in deep, green under there darkness you.',
                     },
                 ],
             },
