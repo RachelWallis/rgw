@@ -1,5 +1,5 @@
 .quote-outer {
-    padding: 4rem;
+    padding: 4rem 0;
 
     .quote-controls {
         display: flex;
@@ -106,7 +106,7 @@
             margin-top: 3rem;
             align-items: center;
             border-radius: 5px;
-            width: 80%;
+            width: 100%;
             border-left: 10px solid $rgw-success-primary;
 
             i {
@@ -117,9 +117,10 @@
                 background-color: $rgw-error-secondary;
                 color: $rgw-error-primary;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 border-color: $rgw-error-primary;
                 align-items: flex-start;
+                margin-top: 0;
                 
                 .text {
                     background: rgb(255 255 255 / 50%);
@@ -140,7 +141,8 @@
                     gap: 0.5rem;
                     gap: 1rem;
                     align-items: center;
-                    font-size: 1.6rem;
+                    font-size: 2rem;
+                    width: 100%;
 
                     i {
                         font-size: 3rem;
@@ -295,7 +297,6 @@
                 background: none;
                 border: none;
                 cursor: pointer;
-                width: 100%;
                 text-align: right;
                 position: relative;
                 top: -1.2rem;   

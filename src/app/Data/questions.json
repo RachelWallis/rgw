@@ -16,7 +16,7 @@
     "id": 2,
     "field": "boilerGas",
     "text": "Does your current boiler run on mains gas?",
-    "subtext": "We're trying to find out the boiler you have now so we know what we are replacing.",
+    "subtext": "We're trying to find out about the boiler you have now so we know what we are replacing.",
     "type": "radio",
     "options": {
       "Yes": 3,

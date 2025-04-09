@@ -351,17 +351,14 @@ const Quote = ({ onComplete }) => {
         <div className="quote-modal">
           <div className="quote-modal-overlay"></div>
           <div className="quote-modal-content">
-            <button className="quote-modal-close" onClick={() => setError("")}>
-              &times;
-            </button>
+
             <div className="info-box error">
               <div className="header">
-                <i className="fa-regular fa-face-frown"></i><strong>Ooops that isn't quite right</strong>
+                <i className="fa-regular fa-face-frown"></i><strong>{error}</strong>
               </div>
-              <div className="text">
-                <div className="error-fix">How to fix it:</div>
-                <div className="error-text">{error}</div>
-              </div>
+              <button className="quote-modal-close" onClick={() => setError("")}>
+              &times;
+            </button>
             </div>
           </div>
         </div>

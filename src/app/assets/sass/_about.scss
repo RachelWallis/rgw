@@ -1,91 +1,87 @@
 .about-page {
-    .single-image {
-      padding: 20px;
-      position: relative;
-      background-color: $rgw-color-lightblue;
-      margin-top: 2rem;
-  
-      img {
-        width: 100%;
-        height: auto;
-      }
-  
-      p {
-        position: absolute;
-        top: 40px;
-        left: 40px;
-        max-width: 40%;
-      }
-    }
+    padding: 2rem;
 
- 
-  
-    @media (max-width: 991px) {
-      .single-image {
-        display: block;
-  
-        img {
-          display: block;
-        }
-  
-        p {
-          width: 100%;
-          max-width: 100%;
-          position: inherit;
-          top: auto;
-          left: auto;
-        }
-      }
-    }
-  }
-
-  .about-text-section{
-    margin-bottom: 2rem;
-    .about-text-section-inner {
+    .about-header {
         padding: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: space-between;
+        background-color: $rgw-color-lightblue;
+        margin-bottom: 4rem;
+        position: relative;
 
-        .about-card {
+        p {
+            max-width: 40%;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            line-height: 1.6;
+            position: absolute;
+            top: 4rem;
+            left: 4rem;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 991px) {
+            p {
+                position: static;
+                max-width: 100%;
+                margin: 0 0 2rem 0;
+            }
+        }
+    }
+
+    .services-tiles {
+        display: flex;
+        gap: 2rem;
+        margin: 4rem 0;
+        padding: 0 2rem;
+        flex-direction: row;
+
+        @media (max-width: 1000px) {
+            flex-direction: column;
+        }
+
+        .service-tile {
+            flex: 1;
             background-color: #1a1a1a;
             border: 1px solid #333;
             border-radius: 8px;
             padding: 2rem;
-            margin-bottom: 2rem;
-            text-align: left;
-            flex-basis: auto;
-            width: auto;
-            max-width: 30%;
-        
+            
             h2 {
                 color: $rgw-main-color;
-                margin-bottom: 1rem;
-                margin-top: 0;
+                margin-bottom: 1.5rem;
+                font-size: 2.4rem;
             }
-        
+
             p {
                 color: #ccc;
+                font-size: 1.6rem;
+                line-height: 1.5;
                 margin: 0;
-            }
-        
-            a {
-                text-decoration: underline;
-        
-            &:hover {
-                text-decoration: none;
-            }
             }
         }
     }
-    .info-card {
-        color: #333;
-        text-align: left;
+
+    .contact-info {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
         padding: 2rem;
+
+        p {
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: #333;
+        }
 
         a {
             text-decoration: underline !important;
+
+            &:hover {
+              text-decoration: underline !important;
+            }
         }
     }
-  }
+}
