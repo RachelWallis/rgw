@@ -196,179 +196,173 @@ const Quote = ({ onComplete }) => {
 
   return (
     <div className="wrap-quote">
-        {currentQuestion !== 1 && currentQuestion !== 2 && (
-          <div className="quote-controls">
-        <span className="left">
-        {currentQuestion !== 1 && (
-          <button onClick={handleBack} className="button back-button">
-            <i className="fa-solid fa-arrow-left"></i> Back
-          </button>
-        )}
-          {currentQuestion !== 1 && (
-            <button
-              onClick={() => {
-                localStorage.removeItem("quoteProgress");
-                window.location.reload();
-              }}
-              className="button restart-button"
-            >
-              <i className="fa-solid fa-arrows-rotate"></i> Restart
-            </button>
-          )}
-        </span>
-        <span className="right">
-            <button onClick={() => window.location.href = '/'} className="button quit-button">
-              Exit <i className="fa-solid fa-person-walking-arrow-right"></i>
-            </button>
-        </span>
+      <div className="p-6 max-w-md mx-auto quote">
+        <h2 className="question-text">{question.text}</h2>
+        <p className="sub-text">{question.subtext}</p>
 
-      </div>
-      )}
-    <div className="p-6 max-w-md mx-auto quote">
-      <h2 className="question-text">{question.text}</h2>
-      <p className="sub-text">{question.subtext}</p>
+        <div className="quote-question">
+          {currentQuestion === Object.keys(questions).length ? (
+            <div className="quote-contact-form">
+              <h3 className="title-text">Contact Details</h3>
+              <div className="quote-contact-fields">
+                <label className="quote-contact-label">
+                  Name
+                  <input type="text" className="quote-contact-input" />
+                </label>
+                <label className="quote-contact-label">
+                  Email Address
+                  <input type="email" className="quote-contact-input" />
+                </label>
+                <label className="quote-contact-label">
+                  Phone Number
+                  <input type="tel" className="quote-contact-input" />
+                </label>
+              </div>
 
-      <div className="quote-question">
-        {currentQuestion === Object.keys(questions).length ? (
-          <div className="quote-contact-form">
-            <h3 className="title-text">Contact Details</h3>
-            <div className="quote-contact-fields">
-              <label className="quote-contact-label">
-                Name
-                <input type="text" className="quote-contact-input" />
-              </label>
-              <label className="quote-contact-label">
-                Email Address
-                <input type="email" className="quote-contact-input" />
-              </label>
-              <label className="quote-contact-label">
-                Phone Number
-                <input type="tel" className="quote-contact-input" />
-              </label>
-            </div>
+              <div className="button-group">
+                <button
+                  className="button quote-skip-button"
+                  onClick={() => {
+                    setModalMessage("Skipping contact details means you won't be able to retrieve your quote later.");
+                  }}
+                >
+                  Skip
+                </button>
+                <button
+                onClick={async () => {
+                  const name = document.querySelector('input[type="text"]')?.value || "";
+                  const email = document.querySelector('input[type="email"]')?.value || "";
+                  const phone = document.querySelector('input[type="tel"]')?.value || "";
 
-            <div className="button-group">
-              <button
-                className="button quote-skip-button"
-                onClick={() => {
-                  setModalMessage("Skipping contact details means you won't be able to retrieve your quote later.");
-                }}
-              >
-                Skip
-              </button>
-              <button
-              onClick={async () => {
-                const name = document.querySelector('input[type="text"]')?.value || "";
-                const email = document.querySelector('input[type="email"]')?.value || "";
-                const phone = document.querySelector('input[type="tel"]')?.value || "";
+                  const result = calculateQuote(answers);
 
-                const result = calculateQuote(answers);
+                  try {
+                    const res = await fetch("/api/saveQuote", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        name,
+                        email,
+                        phone,
+                        answers: JSON.stringify(answers),
+                        price: result.total
+                      })
+                    });
 
-                try {
-                  const res = await fetch("/api/saveQuote", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                      name,
-                      email,
-                      phone,
-                      answers: JSON.stringify(answers),
-                      price: result.total
-                    })
-                  });
+                    if (!res.ok) {
+                      const errorData = await res.json().catch(() => ({}));
+                      console.error("❌ Failed to save quote:", res.status, res.statusText, errorData);
+                      throw new Error("Failed to save quote");
+                    }
 
-                  if (!res.ok) {
-                    const errorData = await res.json().catch(() => ({}));
-                    console.error("❌ Failed to save quote:", res.status, res.statusText, errorData);
-                    throw new Error("Failed to save quote");
-                  }
-
-                  setCurrentQuestion("complete");
-                } catch (err) {
-                  console.error("❌ Submit error:", err);
-                }
-              }}
-              className="button quote-submit-button"
-            >
-              Submit
-            </button>
-            </div>
-
-          </div>
-        ) : (
-          question.type === "text" ? (
-            <div className="input-container">
-              <input
-                type="text"
-                value={answers[currentQuestion] || ""}
-                onChange={(event) => {
-                  const { value } = event.target;
-                  setAnswers((prev) => ({
-                    ...prev,
-                    [currentQuestion]: value,
-                  }));
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    e.preventDefault();
-                    handleNext();
+                    setCurrentQuestion("complete");
+                  } catch (err) {
+                    console.error("❌ Submit error:", err);
                   }
                 }}
-                className="quote-input-box"
-              />
-              <button
-                onClick={() => {
-                  console.log("✅ Search clicked, validating postcode...");
-                  handleNext(); // This will now manually advance only Q1
-                }}
-                className="button"
+                className="button quote-submit-button"
               >
-                <i className="fa-solid fa-magnifying-glass"></i>
-                {currentQuestion < Object.keys(questions).length ? "Search" : "Submit"}
+                Submit
               </button>
+              </div>
+
             </div>
           ) : (
-            Object.keys(question.options).map((option) => (
-              <label key={option} className="quote-label-text">
+            question.type === "text" ? (
+              <div className="input-container">
                 <input
-                  type="radio"
-                  name={`question-${currentQuestion}`} 
-                  value={option}
-                  checked={answers[currentQuestion] === option}
+                  type="text"
+                  value={answers[currentQuestion] || ""}
                   onChange={(event) => {
-                    handleAnswer(event);
+                    const { value } = event.target;
+                    setAnswers((prev) => ({
+                      ...prev,
+                      [currentQuestion]: value,
+                    }));
                   }}
-                  className="quote-radio"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      handleNext();
+                    }
+                  }}
+                  className="quote-input-box"
                 />
-                <span className={`button ${option.toLowerCase().includes("not sure") ? "button-uncertain" : ""}`}>{option}</span>
-              </label>
-            ))
-          )
-        )}
-      </div>
-      
-      {error && (
-        <div className="quote-modal">
-          <div className="quote-modal-overlay"></div>
-          <div className="quote-modal-content">
-
-            <div className="info-box error">
-              <div className="header">
-                <i className="fa-regular fa-face-frown"></i><strong>{error}</strong>
+                <button
+                  onClick={() => {
+                    console.log("✅ Search clicked, validating postcode...");
+                    handleNext(); // This will now manually advance only Q1
+                  }}
+                  className="button"
+                >
+                  <i className="fa-solid fa-magnifying-glass"></i>
+                  {currentQuestion < Object.keys(questions).length ? "Search" : "Submit"}
+                </button>
               </div>
-              <button className="quote-modal-close" onClick={() => setError("")}>
-              &times;
-            </button>
+            ) : (
+              Object.keys(question.options).map((option) => (
+                <label key={option} className="quote-label-text">
+                  <input
+                    type="radio"
+                    name={`question-${currentQuestion}`} 
+                    value={option}
+                    checked={answers[currentQuestion] === option}
+                    onChange={(event) => {
+                      handleAnswer(event);
+                    }}
+                    className="quote-radio"
+                  />
+                  <span className={`button ${option.toLowerCase().includes("not sure") ? "button-uncertain" : ""}`}>{option}</span>
+                </label>
+              ))
+            )
+          )}
+        </div>
+        
+        {error && (
+          <div className="quote-modal">
+            <div className="quote-modal-overlay"></div>
+            <div className="quote-modal-content">
+
+              <div className="info-box error">
+                <div className="header">
+                  <i className="fa-regular fa-face-frown"></i><strong>{error}</strong>
+                </div>
+                <button className="quote-modal-close" onClick={() => setError("")}>
+                &times;
+              </button>
+              </div>
             </div>
           </div>
-        </div>
+        )}
+
+        <QuoteModal message={modalMessage} onClose={() => setModalMessage("")} />
+
+        <div className="info-box"><i className="fa-solid fa-circle-info"></i>{question.hint}</div>
+      </div>
+      {currentQuestion !== 1 && currentQuestion !== 2 && (
+          <div className="quote-controls">
+            <p class="quick-quote">powered by Quick Quote UK</p>
+            <span className="left">
+              {currentQuestion !== 1 && (
+                <button onClick={handleBack} className="button back-button">
+                  <i className="fa-solid fa-arrow-left"></i> Back
+                </button>
+              )}
+              {currentQuestion !== 1 && (
+                <button
+                  onClick={() => {
+                    localStorage.removeItem("quoteProgress");
+                    window.location.reload();
+                  }}
+                  className="button restart-button"
+                >
+                  <i className="fa-solid fa-arrows-rotate"></i> Restart
+                </button>
+              )}
+        </span>
+         </div>
       )}
-
-      <QuoteModal message={modalMessage} onClose={() => setModalMessage("")} />
-
-      <div className="info-box"><i className="fa-solid fa-circle-info"></i>{question.hint}</div>
-    </div>
-
     </div>
 
   );

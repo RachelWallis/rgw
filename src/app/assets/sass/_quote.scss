@@ -1,5 +1,4 @@
 .quote-outer {
-    padding: 4rem 0;
 
     .quote-controls {
         display: flex;
@@ -9,23 +8,32 @@
         justify-content: space-between;
         background-color: $rgw-color-lightblue;
         padding: 1rem;
+        background-color: #3c3c3c;
+
+        .quick-quote {color:#8e8d8d;}
 
 
         button {
-            padding: 1rem 2rem;
+            padding: 0.5rem 0.75rem;
             border-radius: 6px;
             border: 1px solid #9dacbd;
             display: flex;
             flex-direction: row;
             gap: 1.2rem;
             align-items: center;
+            color: #3c3c3c;
+            font-size: 1.4rem;
+
+                i {
+                    font-size: 1.4rem;
+                }
 
             &:before {
-                background-color: white;
+                background-color: #afafaf;
             }
 
             &:after {
-                background-color: white;           
+                background-color: #afafaf;       
             }
         }
 
@@ -100,11 +108,11 @@
             padding: 2rem;
             display: flex;
             flex-direction: row;
-            gap: 1rem;
+            gap: 1.2rem;
             color: $rgw-success-primary;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             margin-top: 3rem;
-            align-items: center;
+            align-items: flex-start;
             border-radius: 5px;
             width: 100%;
             border-left: 10px solid $rgw-success-primary;
@@ -160,6 +168,19 @@
             flex-wrap: wrap;
             justify-content: center;
 
+            @media (max-width: 600px) {
+                flex-direction: column;
+                width: 100%;
+
+                .quote-label-text {
+                    width: 100%;
+
+                    .button {
+                        width: 100%;
+                    }
+                }
+            }
+
             .input-container {
                 display: flex;
                 align-items: center;
@@ -168,17 +189,18 @@
                 input {
                     min-width: 5rem;
                     border: 2px solid black;
-                    height: $input-height;
+                    height: $input-height-lg;
                     border-radius: 1rem 0 0 1rem;
                     text-transform: uppercase;
                     padding-left: 1rem;
+                    line-height: $input-height-lg;
                 }
     
                 button {
-                    height: $input-height;
+                    height: $input-height-lg;
                     padding: 0 2rem;
                     background-color: $rgw-color-primary;
-                    color: black;
+                    color: rgb(255, 255, 255);
                     border-radius: 0 1rem 1rem 0;
                     font-weight: 500;
                     border: 2px solid black;
@@ -187,6 +209,8 @@
                     align-items: center;
                     display: flex;
                     flex-direction: row;
+                    line-height: $input-height-lg;
+                    margin: 0;
                 }
             }
 
@@ -206,10 +230,11 @@
                     font-size: 2.6rem;
 
                     &.button-uncertain, &.quote-skip-button {
-                        border: none;
+                        border: 2px solid darken($quote-button,10%);
                         padding: 2rem 3rem;
                         font-size: 2.2rem;
                         border-radius: 1rem;
+                        color: darken($quote-button,10%);
 
                         &::before {
                             background-color: #c4ccdd;

@@ -8,24 +8,6 @@ function Footer() {
         <footer className="footer" style={{ position: 'relative', width: '100%' }}>
             <div className="footer--wrapper">
                 <div className="container">
-                    <div className="footer--header">
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <div className="footer--logo">
-                                    <a href="index.html">
-                                        <Image src={logo} alt="footer" />
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="col-lg-5 offset-lg-1">
-                                <div className="footer--paragraph">
-                                    <h3 className="heading heading-large light-1">
-                                    Heating & Plumbing experts you can rely on
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div className="footer--details">
                         <div className="row">
                             <div className="col-lg-4">

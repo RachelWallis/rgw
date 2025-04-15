@@ -10,14 +10,14 @@ function ServicesDetailed() {
             <ServicesDetailedheader />
 
             <div className="text-content">
-                <div className="text-content-wrapper position-relative bg-black">
+                <div className="text-content-wrapper position-relative rgw-dark-col">
                     <TextContentHeader heading="Need a new Boiler?" />
 
                     <div className="text-content-inner">
                         <TabsSection dark="true" />
                     </div>
                     <CallToAction 
-                        wrapperClass='text-content-footer bg-black pt-0 pb-0'
+                        wrapperClass='text-content-footer rgw-dark-col pt-0 pb-0'
                         headingClass='light-1'
                         heading={
                             <>

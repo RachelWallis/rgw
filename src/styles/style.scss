@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap');
+
 
 @import '@/app/assets/sass/_variables.scss';
 @import '@/app/assets/sass/_mixins.scss';
@@ -13,7 +13,9 @@ preloader
 /********************
 typography
 ********************/
+@import '@/app/assets/sass/_fonts.scss';
 @import '@/app/assets/sass/_typography.scss';
+
 
 /********************
 wordpress core

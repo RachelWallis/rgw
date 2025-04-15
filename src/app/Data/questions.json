@@ -3,9 +3,9 @@
     "id": 1,
     "field": "postcode",
     "text": "Enter your postcode",
-    "subtext": "We are a local company (in between Winchester & Southampton so need to know your postcode to find if we work in your area.",
+    "subtext": "We need to know your postcode to establish if we work in your area.",
     "type": "text",
-    "hint": "UK postcodes typically have a space. For example AB12 3CD",
+    "hint": "UK postcodes typically have a space. For example AB12 3CD.",
     "validationKey": "postcodeCheck",
     "next": 2,
     "input": {
@@ -29,7 +29,7 @@
     "id": 3,
     "field": "knowBoilerType",
     "text": "Do you know what type of boiler you currently have?",
-    "subtext": "We need to know what you currently have, it will help us make recommendations for what we can fit",
+    "subtext": "We need to know what you currently have, it will help us make recommendations for what we can fit at your property.",
     "type": "radio",
     "options": {
       "Combi Boiler": 5,
@@ -134,55 +134,55 @@
   },
   "11": {
     "id": 11,
-    "field": "fluePosition",
-    "text": "Where does your flue exit your home?",
-    "subtext": "This helps us understand ventilation requirements.",
-    "type": "radio",
-    "options": {
-      "Through the roof": 13,
-      "Out the wall": 13,
-      "I'm not sure": 13
-    },
-    "hint": "It's usually a white pipe coming out of a wall or roof."
-  },
-  "12": {
-    "id": 12,
-    "field": "flueAccessible",
-    "text": "Is your boiler's flue accessible from the outside?",
-    "subtext": "This is important for installation and safety.",
-    "type": "radio",
-    "options": {
-      "Yes, it is": 14,
-      "No, it isn't": null
-    },
-    "hint": "If it's difficult to reach from outside, a call may be needed."
-  },
-  "13": {
-    "id": 13,
-    "field": "groundFloor",
-    "text": "Is your property on the ground floor?",
-    "subtext": "This affects how we access your flue.",
-    "type": "radio",
-    "options": {
-      "Yes, it is": 14,
-      "No, it is 2nd floor or higher": 12
-    },
-    "hint": "Let us know if your boiler is upstairs or at height."
-  },
-  "14": {
-    "id": 14,
     "field": "propertyType",
     "text": "What sort of property do you have?",
     "subtext": "This helps us assess installation requirements.",
     "type": "radio",
     "options": {
-      "Flat or Apartment": 15,
-      "Terraced House": 15,
-      "Semi-Detached": 15,
-      "Detached House": 15,
-      "Bungalow": 15
+      "Flat or Apartment": 12,
+      "Terraced House": 13,
+      "Semi-Detached": 13,
+      "Detached House": 13,
+      "Bungalow": 13
     },
     "hint": "Choose the option that best describes your property."
+  },
+  "12": {
+    "id": 12,
+    "field": "groundFloor",
+    "text": "Is your property on the ground floor?",
+    "subtext": "This affects how we access your flue.",
+    "type": "radio",
+    "options": {
+      "Yes, it is": 15,
+      "No, it is 2nd floor or higher": 14
+    },
+    "hint": "Let us know if your boiler is upstairs or at height."
+  },
+  "13": {
+    "id": 13,
+    "field": "fluePosition",
+    "text": "Where does your flue exit your home?",
+    "subtext": "This helps us understand ventilation requirements.",
+    "type": "radio",
+    "options": {
+      "Through the roof": 15,
+      "Out the wall": 15,
+      "I'm not sure": 15
+    },
+    "hint": "It's usually a white pipe coming out of a wall or roof."
+  },
+  "14": {
+    "id": 14,
+    "field": "flueAccessible",
+    "text": "Is your boiler's flue accessible from the outside?",
+    "subtext": "This is important for installation and safety.",
+    "type": "radio",
+    "options": {
+      "Yes, it is": 15,
+      "No, it isn't": null
+    },
+    "hint": "If it's difficult to reach from outside, a call may be needed."
   },
   "15": {
     "id": 15,

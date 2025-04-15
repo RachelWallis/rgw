@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { menuItems } from '../../Data/MenuItems';
-import logo from '../../assets/images/logo.svg';
+import logo from '../../assets/images/logo/white-text.png';
 import Image from 'next/image';
 import Button from '../Misc/Button';
 

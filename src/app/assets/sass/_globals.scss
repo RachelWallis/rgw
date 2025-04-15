@@ -41,13 +41,14 @@ html {
 
 body {
     position: relative;
-    font-family: 'Spartan', sans-serif;
+    font-family: 'Nunito-sans', sans-serif;
     box-sizing: border-box;
-    padding: var(--side-padding);
+    padding: 0;
     min-height: 100vh;
     min-height: stretch;
     overflow-x: hidden;
     overflow: hidden;
+    background-color: $body-bg;
 
     @media (max-width: 600px) {
         &.admin-bar {

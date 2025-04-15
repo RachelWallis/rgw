@@ -7,18 +7,18 @@
     overflow: hidden;
     cursor: pointer;
     z-index: 20;
-    border: none;
     display: inline-block;
-    color: var(--rgw-foreground);
-    font-size: 1.6rem;
-    font-weight: 700;
-    padding: 1.9rem 5.1rem;
+    font-weight: 500;
     max-width: 100%;
     text-align: center;
-    @include animateIt;
-    @media (max-width: 575px) {
-        padding: 1.9rem 4rem;
-    }
+
+    background-color: $quote-button;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    color: $quote-button-text;
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+
     &::before {
         content: '';
         position: absolute;
@@ -26,7 +26,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $rgw-main-color;
+        background-color: $quote-button;
         z-index: -1;
     }
     &::after {

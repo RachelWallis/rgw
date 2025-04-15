@@ -27,11 +27,22 @@ $rgw-main-color-50: rgba(255,128,0,.50);
 $rgw-main-color-25: rgba(255,128,0,.25);
 
 $input-height: 4.4rem;
-$quote-button: #ffd1a3;
+$quote-button: $rgw-color-secondary;
+$quote-button-text: white;
+
+$rgw-dark-col: rgb(43, 43, 43);
+
+
+$body-bg:   $rgw-color-lightblue;
+$input-height:  4.4rem;
+$input-height-sm:    calc($input-height*0.75);
+$input-height-lg:  calc($input-height*1.2);
 
 :root {
     --side-padding: 5rem;
-    --admin-bar-height: 32px;
+    --nav-bg-col: rgb(43, 43, 43);
+    --footer-bg-col: rgb(43, 43, 43);
+    --dark-section-bg-col: rgb(43, 43, 43);
 
     $rgw-main-color-50: rgba(255,128,0,.50);
 

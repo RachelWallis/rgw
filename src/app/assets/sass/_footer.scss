@@ -7,7 +7,8 @@
     }
     &--wrapper {
         padding: 2rem;
-        background-color: $color-black;
+        background-color: $rgw-dark-col;
+        
         @media (max-width: 1024px) {
             padding: 7.5rem 0;
         }
